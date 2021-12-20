@@ -45,6 +45,9 @@ ul li a{
 ul li a:visited{
   color: black;
 }
+ul li a:link{
+  color: black;
+}
 
 .dropdown{
   display: grid;
@@ -95,6 +98,8 @@ ul li a:visited{
   display: block;
 
 }
+
+
 
 .social-icons .social li{
   display: flex;
