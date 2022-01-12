@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAV</title>
+  <script defer src="main.js"></script>
   <link rel="icon" href="img/favicon-32x32.png">
   <link rel="stylesheet" href="styles.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,8 +19,59 @@
 </head>
 
 <body>
+
+  <div class="sidemenu" id="side-menu">
+    <div class="menu-container">
+      <div>
+        <svg viewBox="0 0 100 80" width="20" height="20" onclick="toggleSideMenu();">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+
+        <h1>RAV</h1>
+      </div>
+      <div class="side-menu-list">
+        <ul>
+          <li>Home</li>
+          <div class="selected"></div>
+          <li> <a href="contact-page.html" onclick="toggleSideMenu();">Contact</a>
+          </li>
+
+          <hr>
+
+          <ul>
+            <li><a href="#about" onclick="toggleSideMenu();">Introduction</a></li>
+            <li><a href="#Interests" onclick="toggleSideMenu();"> Interests</a></li>
+            <li> <a href="#Skills" onclick="toggleSideMenu();"> Skills</a></li>
+            <li><a href="https://github.com/rallen2000v/first-site" target="_blank" onclick="toggleSideMenu();">GitHub</a></li>
+          </ul>
+          </li>
+
+          <div class="social-icons" style="grid-area: icons;">
+            <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/i/flow/consent_flow" target="_blank" class="fa fa-twitter"></a>
+          </div>
+        </ul>
+
+       
+      </div>
+    </div>
+    <div class="backdrop" onclick="toggleSideMenu();">
+
+    </div>
+  </div>
+
+
   <header class="sticky-header">
-    <h1>Ralph Allen Villanueva</h1>
+    <svg class="mobile" viewBox="0 0 100 80" width="20" height="20" onclick="toggleSideMenu();">
+      <rect width="100" height="10"></rect>
+      <rect y="30" width="100" height="10"></rect>
+      <rect y="60" width="100" height="10"></rect>
+    </svg>
+    <h1 class="mobile">RAV</h1>
+    <h1 class="desktop">Ralph Allen Villanueva</h1>
     <nav class="dropdown">
       <ul style="grid-area: drop; justify-self: center;">
         <li>
@@ -41,7 +93,7 @@
         </li>
       </ul>
 
-      <div class="social-iconsT" style="grid-area: icons;">
+      <div class="social-icons" style="grid-area: icons;">
         <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
         <a href="https://twitter.com/i/flow/consent_flow" target="_blank" class="fa fa-twitter"></a>
@@ -53,12 +105,12 @@
       - RAV</h2>
   </div>
   <div class="container">
-    <img src="img/6.jpg" style="width: 80%;">
+    <img src="img/6.jpg">
   </div>
   <div class="container-introduction">
     <div class="introduction">
-      <h2 id="about" style="color: black;">Introduction</h2>
-      <p style="color: black;">My name is Ralph Allen Villanueva and I am an student and owner of a pitbull mix. I am 21
+      <h2 id="about" class="title">Introduction</h2>
+      <p>My name is Ralph Allen Villanueva and I am an student and owner of a pitbull mix. I am 21
         and was born and raised in Milan, Italy.
         <br>
         <br>
@@ -67,7 +119,7 @@
       </p>
     </div>
     <div class="myself">
-      <img src="img/me.jpg" style="width: 400px;">
+      <img src="img/me.jpg">
     </div>
   </div>
 
@@ -75,16 +127,17 @@
 
   <div class="container-IS">
     <div id="Interests" class="interests">
-      <img src="img/7.jpg" style="width:400px;">
-      <h3 >Interests</h3>
-      <p>At age fifthteen I started getting interested into many things including photography, dogs, new technologies,
+      <img src="img/7.jpg">
+      <h3 class="section-title">Interests</h3>
+      <p class="section-text">At age fifthteen I started getting interested into many things including photography,
+        dogs, new technologies,
         investments & hiking. <br>
       </p>
     </div>
     <div id="Skills" class="skills">
-      <img src="img/3.jpg" style="width:400px;">
-      <h3>Skills</h3>
-      <ul class="sk">
+      <img src="img/3.jpg">
+      <h3 class="section-title">Skills</h3>
+      <ul class="sk section-text">
         <li>HTML</li>
         <li>CSS</li>
         <li>SASS</li>
@@ -100,7 +153,7 @@
       <h3>@Copyright 2021 RAV2000</h3>
     </div>
 
-    <div class="social-iconsT">
+    <div class="social-icons">
       <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
       <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
       <a href="#" class="fa fa-twitter"></a>

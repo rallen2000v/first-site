@@ -6,12 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAV</title>
-  <script src="form.js"defer></script>
+  <script src="main.js" defer></script>
+  <script src="form.js" defer></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script type="text/javascript">
-  (function() {
-    emailjs.init("user_ep8Kbr1lkk6fN1xjA3DMn");
-  })();
+    (function () {
+      emailjs.init("user_ep8Kbr1lkk6fN1xjA3DMn");
+    })();
   </script>
   <link rel="icon" href="img/favicon-32x32.png">
   <link rel="stylesheet" href="styles.min.css">
@@ -25,8 +26,54 @@
 </head>
 
 <body>
+  <div class="sidemenu" id="side-menu">
+    <div class="menu-container">
+      <div>
+        <svg viewBox="0 0 100 80" width="20" height="20" onclick="toggleSideMenu();">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+
+        <h1>RAV</h1>
+      </div>
+      <div class="side-menu-list">
+        <ul>
+          <li><a href="index.html" onclick="toggleSideMenu();">Home</a></li>
+
+          <li>Contact</li>
+          <div class="selected"></div>
+
+          <hr>
+
+          <ul>
+            <li><a href="https://github.com/rallen2000v/first-site" target="_blank"
+                onclick="toggleSideMenu();">GitHub</a></li>
+          </ul>
+          </li>
+
+          <div class="social-icons" style="grid-area: icons;">
+            <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/i/flow/consent_flow" target="_blank" class="fa fa-twitter"></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="backdrop" onclick="toggleSideMenu();">
+
+    </div>
+  </div>
+
+
   <header class="sticky-header">
-    <h1>Ralph Allen Villanueva</h1>
+    <svg class="mobile" viewBox="0 0 100 80" width="20" height="20" onclick="toggleSideMenu();">
+      <rect width="100" height="10"></rect>
+      <rect y="30" width="100" height="10"></rect>
+      <rect y="60" width="100" height="10"></rect>
+    </svg>
+    <h1 class="mobile">RAV</h1>
+    <h1 class="desktop">Ralph Allen Villanueva</h1>
     <nav class="dropdown">
       <ul style="grid-area: drop; justify-self: center;">
         <li>
@@ -48,61 +95,54 @@
         </li>
       </ul>
 
-      <div class="social-iconsT" style="grid-area: icons;">
+      <div class="social-icons" style="grid-area: icons;">
         <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
         <a href="https://twitter.com/i/flow/consent_flow" target="_blank" class="fa fa-twitter"></a>
       </div>
     </nav>
   </header>
-<div class="contact-page">
+  <div class="contact-page">
+    <h2>Contact Me</h2>
+    <div class="contact-page-container">
+      <div class="info">
+        <p>
+          <strong id="info">INFO</strong><br>
+          +39 380 746 1458 <br>
+          <br>
 
-<h2>Contact Me</h2>
-<div class="contact-page-container">
-  <div class="info">
-    <p>
-      <strong id="info">INFO</strong><br>
-      +39 380 746 1458 <br>
-      <br>
-
-      <strong id="address">ADDRESS</strong> <br>
-      Via Gian Carlo Castelbarco 2 <br>
-      Milano, 20136 <br><br>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.0251316315585!2d9.183827315519936!3d45.44914967910091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c405f342dc1d%3A0x68c7a6897f432ddc!2sVia%20Gian%20Carlo%20Castelbarco%2C%202%2C%2020136%20Milano%20MI!5e0!3m2!1sit!2sit!4v1637311675881!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </p>
+          <strong id="address">ADDRESS</strong> <br>
+          Via Gian Carlo Castelbarco 2 <br>
+          Milano, 20136 <br><br>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.0251316315585!2d9.183827315519936!3d45.44914967910091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c405f342dc1d%3A0x68c7a6897f432ddc!2sVia%20Gian%20Carlo%20Castelbarco%2C%202%2C%2020136%20Milano%20MI!5e0!3m2!1sit!2sit!4v1637311675881!5m2!1sit!2sit"
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </p>
+      </div>
+      <div class="form-container">
+        <form class="form">
+          <input type="text" class="field" id="fromName" placeholder="Enter Your Name">
+          <input type="text" id="msg" placeholder="Enter your message">
+          <button id="button">Send Email</button>
+        </form>
+      </div>
     </div>
-  <div class="form-container">
-    <form class="form">
-      <input type="text" class="field" id="fromName" placeholder="Enter Your Name">
-      <input type="text" id="msg" placeholder="Enter your message">
-      <button id="button">Send Email</button>
-    </form>
+
+
+    <footer class="flex-footer">
+      <div class="h3">
+        <h3>@Copyright 2021 RAV2000</h3>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
+
+
+    </footer>
   </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-  <footer class="flex-footer">
-    <div class="h3">
-      <h3>@Copyright 2021 RAV2000</h3>
-    </div>
-
-    <div class="social-iconsT">
-      <a href="https://www.facebook.com/rallen.villanueva" target="_blank" class="fa fa-facebook"></a>
-      <a href="https://www.instagram.com/rallenvill/" target="_blank" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-twitter"></a>
-    </div>
-
-
-  </footer>
 </body>
 
 </html>
